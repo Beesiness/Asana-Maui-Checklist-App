@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Asana.Maui.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Asana.Maui"
+    xmlns:views="clr-namespace:Asana.Maui.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="Asana.Maui">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    <ShellContent
+        Title="ToDo Details"
+        ContentTemplate="{DataTemplate views:ToDoDetailView}"
+        Route="ToDoDetails" />
+    <ShellContent
+        Title="Project Details"
+        ContentTemplate="{DataTemplate views:ProjectDetailView}"
+        Route="ProjectDetails" />
+    <ShellContent
+        Title="Import/Export Details"
+        ContentTemplate="{DataTemplate views:ImportExportView}"
+        Route="ImportExport" />
+    <ShellContent
+        Title="Manage Users Menu"
+        ContentTemplate="{DataTemplate views:ManageUsersView}"
+        Route="ManageUsers" />
+    <ShellContent
+        Title="User Details Management"
+        ContentTemplate="{DataTemplate views:UserDetailView}"
+        Route="UserDetail" />
+    
+</Shell>

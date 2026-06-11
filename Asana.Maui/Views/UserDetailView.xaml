@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Asana.Maui.Views.UserDetailView"
+             Title="User Details"
+            NavigatedFrom="ContentPage_NavigatedFrom"
+            NavigatedTo="ContentPage_NavigatedTo">
+    <VerticalStackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Text="Display Name" Grid.Row="0"/>
+            <Entry Text="{Binding Model.DisplayName}" Grid.Row="1"/>
+            <Label Text="Username" Grid.Row="2"/>
+            <Entry Text="{Binding Model.Username}" Grid.Row="3"/>
+            
+            <Label Text="Assign ToDo:" Grid.Row="4"/>
+            <Picker ItemsSource="{Binding AllToDos}" 
+                SelectedItem="{Binding SelectedToDo, Mode=TwoWay}" 
+                ItemDisplayBinding="{Binding Name}" 
+                Grid.Row="5"/>
+            <Button Text="Confirm" Command="{Binding AssignToDoCommand}" Grid.Row="6"/>
+            <!--<Button Text="Save" Command="{Binding SaveCommand}" Grid.Row="7"/>-->
+            <Button Text="Back" Clicked="CancelClicked" Grid.Row="8"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

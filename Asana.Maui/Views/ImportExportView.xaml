@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Asana.Maui.Views.ImportExportView"
+             Title="Import/Export"
+            NavigatedFrom="ContentPage_NavigatedFrom"
+            NavigatedTo="ContentPage_NavigatedTo">
+    <VerticalStackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+
+            </Grid.RowDefinitions>
+            <Button Text="Export Data" Command="{Binding ExportCommand}" Grid.Row="0"/>
+            <Button Text="Import Data" Command="{Binding ImportCommand}" Grid.Row="1"/>
+            <Button Text="Cancel" Clicked="CancelClicked" Grid.Row="2"/>
+            <Button Text="Return to Main Page" Clicked="OkClicked" Grid.Row="3"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
